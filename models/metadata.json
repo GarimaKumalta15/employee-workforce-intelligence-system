@@ -1,0 +1,466 @@
+{
+  "metrics": {
+    "perf": {
+      "title": "Performance (regression)",
+      "type": "regression",
+      "r2": 0.6579552126452978,
+      "mae": 0.2819817032540173,
+      "test_size": 300
+    },
+    "attr": {
+      "title": "Attrition",
+      "type": "classification",
+      "threshold": 0.2,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.3956043956043956,
+      "recall": 0.7058823529411765,
+      "f1": 0.5070422535211268,
+      "roc_auc": 0.8499881880463028,
+      "positive_rate": 0.17066666666666666,
+      "test_size": 300
+    },
+    "promo": {
+      "title": "Promotion",
+      "type": "classification",
+      "threshold": 0.22,
+      "accuracy": 0.7866666666666666,
+      "precision": 0.3225806451612903,
+      "recall": 0.47619047619047616,
+      "f1": 0.38461538461538464,
+      "roc_auc": 0.7235142118863048,
+      "positive_rate": 0.14,
+      "test_size": 300
+    },
+    "train": {
+      "title": "Training need",
+      "type": "classification",
+      "threshold": 0.28,
+      "accuracy": 0.6633333333333333,
+      "precision": 0.46206896551724136,
+      "recall": 0.7444444444444445,
+      "f1": 0.5702127659574469,
+      "roc_auc": 0.7672486772486773,
+      "positive_rate": 0.3006666666666667,
+      "test_size": 300
+    },
+    "segmentation": {
+      "title": "Employee segmentation (K-Means, k=4)",
+      "type": "clustering",
+      "silhouette": 0.11839620988984825,
+      "silhouette_by_k": {
+        "2": 0.115,
+        "3": 0.113,
+        "4": 0.118,
+        "5": 0.105,
+        "6": 0.104,
+        "7": 0.1
+      }
+    },
+    "data": {
+      "rows_raw": 1508,
+      "rows_clean": 1500,
+      "duplicates_removed": 8,
+      "missing_values_imputed": 134
+    }
+  },
+  "importances": {
+    "perf": [
+      {
+        "feature": "job_satisfaction",
+        "label": "Job satisfaction",
+        "importance": 0.5324
+      },
+      {
+        "feature": "manager_rating",
+        "label": "Manager rating",
+        "importance": 0.4845
+      },
+      {
+        "feature": "training_hours_last_year",
+        "label": "Training hours (last year)",
+        "importance": 0.1069
+      },
+      {
+        "feature": "job_involvement",
+        "label": "Job involvement",
+        "importance": 0.0354
+      },
+      {
+        "feature": "absenteeism_days",
+        "label": "Absenteeism days",
+        "importance": 0.0146
+      },
+      {
+        "feature": "projects_completed",
+        "label": "Projects completed",
+        "importance": 0.0108
+      },
+      {
+        "feature": "gender",
+        "label": "Gender",
+        "importance": 0.002
+      },
+      {
+        "feature": "overtime",
+        "label": "Overtime",
+        "importance": 0.002
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "importance": 0.0011
+      },
+      {
+        "feature": "job_role",
+        "label": "Job role",
+        "importance": 0.0007
+      }
+    ],
+    "attr": [
+      {
+        "feature": "overtime",
+        "label": "Overtime",
+        "importance": 0.0718
+      },
+      {
+        "feature": "performance_score",
+        "label": "Performance score",
+        "importance": 0.0404
+      },
+      {
+        "feature": "environment_satisfaction",
+        "label": "Environment satisfaction",
+        "importance": 0.0199
+      },
+      {
+        "feature": "job_satisfaction",
+        "label": "Job satisfaction",
+        "importance": 0.017
+      },
+      {
+        "feature": "education",
+        "label": "Education",
+        "importance": 0.0063
+      },
+      {
+        "feature": "absenteeism_days",
+        "label": "Absenteeism days",
+        "importance": 0.0058
+      },
+      {
+        "feature": "num_companies_worked",
+        "label": "Companies worked at",
+        "importance": 0.0058
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "importance": 0.0046
+      },
+      {
+        "feature": "job_involvement",
+        "label": "Job involvement",
+        "importance": 0.0039
+      },
+      {
+        "feature": "gender",
+        "label": "Gender",
+        "importance": 0.0033
+      }
+    ],
+    "promo": [
+      {
+        "feature": "performance_score",
+        "label": "Performance score",
+        "importance": 0.0792
+      },
+      {
+        "feature": "years_since_last_promotion",
+        "label": "Years since last promotion",
+        "importance": 0.0277
+      },
+      {
+        "feature": "manager_rating",
+        "label": "Manager rating",
+        "importance": 0.0147
+      },
+      {
+        "feature": "last_salary_hike_pct",
+        "label": "Last salary hike %",
+        "importance": 0.0119
+      },
+      {
+        "feature": "job_satisfaction",
+        "label": "Job satisfaction",
+        "importance": 0.0113
+      },
+      {
+        "feature": "work_life_balance",
+        "label": "Work-life balance",
+        "importance": 0.0053
+      },
+      {
+        "feature": "num_companies_worked",
+        "label": "Companies worked at",
+        "importance": 0.0018
+      }
+    ],
+    "train": [
+      {
+        "feature": "training_hours_last_year",
+        "label": "Training hours (last year)",
+        "importance": 0.0903
+      },
+      {
+        "feature": "performance_score",
+        "label": "Performance score",
+        "importance": 0.0785
+      },
+      {
+        "feature": "trainings_attended",
+        "label": "Trainings attended",
+        "importance": 0.0151
+      },
+      {
+        "feature": "years_at_company",
+        "label": "Tenure at company",
+        "importance": 0.0063
+      },
+      {
+        "feature": "num_companies_worked",
+        "label": "Companies worked at",
+        "importance": 0.0039
+      },
+      {
+        "feature": "work_life_balance",
+        "label": "Work-life balance",
+        "importance": 0.0037
+      },
+      {
+        "feature": "total_working_years",
+        "label": "Total experience",
+        "importance": 0.0025
+      },
+      {
+        "feature": "business_travel",
+        "label": "Business travel",
+        "importance": 0.0018
+      }
+    ]
+  },
+  "seg_profiles": {
+    "Rising Stars": "Higher performance score, job satisfaction; lower overtime, absenteeism days than the workforce average.",
+    "Burnout Risk": "Higher overtime, absenteeism days; lower tenure at company, work-life balance than the workforce average.",
+    "Established Core": "Higher tenure at company, age; lower absenteeism days, overtime than the workforce average.",
+    "Disengaged": "Higher work-life balance, absenteeism days; lower job satisfaction, performance score than the workforce average."
+  },
+  "ref": {
+    "options": {
+      "gender": [
+        "Female",
+        "Male"
+      ],
+      "department": [
+        "Data & Analytics",
+        "Engineering",
+        "Finance",
+        "Human Resources",
+        "Marketing",
+        "Operations",
+        "Sales"
+      ],
+      "job_role": [
+        "Account Manager",
+        "Accountant",
+        "Brand Manager",
+        "Content Strategist",
+        "Data Analyst",
+        "Data Scientist",
+        "DevOps Engineer",
+        "Finance Manager",
+        "Financial Analyst",
+        "HR Executive",
+        "HR Manager",
+        "ML Engineer",
+        "Marketing Executive",
+        "Operations Executive",
+        "Operations Manager",
+        "QA Engineer",
+        "Recruiter",
+        "Sales Executive",
+        "Sales Manager",
+        "Senior Software Engineer",
+        "Software Engineer",
+        "Support Specialist"
+      ],
+      "education": [
+        "Bachelor",
+        "Below College",
+        "College",
+        "Doctor",
+        "Master"
+      ],
+      "overtime": [
+        "No",
+        "Yes"
+      ],
+      "business_travel": [
+        "Non-Travel",
+        "Travel_Frequently",
+        "Travel_Rarely"
+      ]
+    },
+    "ranges": {
+      "age": [
+        21.0,
+        60.0
+      ],
+      "distance_from_home": [
+        1.0,
+        60.0
+      ],
+      "job_level": [
+        1.0,
+        5.0
+      ],
+      "total_working_years": [
+        0.0,
+        38.0
+      ],
+      "years_at_company": [
+        0.0,
+        23.0
+      ],
+      "years_since_last_promotion": [
+        0.0,
+        12.0
+      ],
+      "num_companies_worked": [
+        0.0,
+        8.0
+      ],
+      "monthly_income": [
+        27600.0,
+        179700.0
+      ],
+      "last_salary_hike_pct": [
+        3.0,
+        25.0
+      ],
+      "job_satisfaction": [
+        1.0,
+        4.0
+      ],
+      "work_life_balance": [
+        1.0,
+        4.0
+      ],
+      "environment_satisfaction": [
+        1.0,
+        4.0
+      ],
+      "job_involvement": [
+        1.0,
+        4.0
+      ],
+      "manager_rating": [
+        1.0,
+        5.0
+      ],
+      "training_hours_last_year": [
+        0.0,
+        89.0
+      ],
+      "trainings_attended": [
+        0.0,
+        9.0
+      ],
+      "projects_completed": [
+        1.0,
+        19.0
+      ],
+      "absenteeism_days": [
+        0.0,
+        16.0
+      ],
+      "performance_score": [
+        1.29,
+        5.0
+      ]
+    },
+    "fill": {
+      "age": 36.0,
+      "distance_from_home": 6.0,
+      "job_level": 2.0,
+      "total_working_years": 12.0,
+      "years_at_company": 5.0,
+      "years_since_last_promotion": 1.0,
+      "num_companies_worked": 2.0,
+      "monthly_income": 72350.0,
+      "last_salary_hike_pct": 12.0,
+      "job_satisfaction": 3.0,
+      "work_life_balance": 3.0,
+      "environment_satisfaction": 3.0,
+      "job_involvement": 3.0,
+      "manager_rating": 4.0,
+      "training_hours_last_year": 31.0,
+      "trainings_attended": 2.0,
+      "projects_completed": 8.0,
+      "absenteeism_days": 5.0,
+      "performance_score": 3.11,
+      "gender": "Male",
+      "department": "Engineering",
+      "job_role": "Software Engineer",
+      "education": "Bachelor",
+      "overtime": "No",
+      "business_travel": "Travel_Rarely"
+    },
+    "roles_by_dept": {
+      "Data & Analytics": [
+        "Data Analyst",
+        "Data Scientist",
+        "ML Engineer"
+      ],
+      "Engineering": [
+        "DevOps Engineer",
+        "QA Engineer",
+        "Senior Software Engineer",
+        "Software Engineer"
+      ],
+      "Finance": [
+        "Accountant",
+        "Finance Manager",
+        "Financial Analyst"
+      ],
+      "Human Resources": [
+        "HR Executive",
+        "HR Manager",
+        "Recruiter"
+      ],
+      "Marketing": [
+        "Brand Manager",
+        "Content Strategist",
+        "Marketing Executive"
+      ],
+      "Operations": [
+        "Operations Executive",
+        "Operations Manager",
+        "Support Specialist"
+      ],
+      "Sales": [
+        "Account Manager",
+        "Sales Executive",
+        "Sales Manager"
+      ]
+    }
+  },
+  "risk_cutoffs": [
+    26.350748964767583,
+    37.26710748761811
+  ],
+  "thresholds": {
+    "attr": 0.2,
+    "promo": 0.22,
+    "train": 0.28
+  }
+}

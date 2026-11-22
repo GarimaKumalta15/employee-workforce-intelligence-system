@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee & Workforce Intelligence System</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><span class="logo">EW</span><div><b>Workforce<br>Intelligence</b><small>AI-powered HR decisions</small></div></div>
+  <nav>
+    <a href="#dashboard" data-tab="dashboard" class="active">📊 Dashboard</a>
+    <a href="#employees" data-tab="employees">👥 Employees</a>
+    <a href="#whatif" data-tab="whatif">🧪 What-If Predictor</a>
+    <a href="#report" data-tab="report">📝 AI Workforce Report</a>
+    <a href="#models" data-tab="models">🤖 Model Insights</a>
+  </nav>
+  <div class="foot">GEHU Haldwani · BCA (AI&amp;DS)<br>Project Based Learning</div>
+</aside>
+
+<main>
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="tab active">
+    <h1>Workforce Dashboard</h1>
+    <div class="kpis" id="kpis"></div>
+    <div class="grid">
+      <div class="card"><h3>Average attrition risk by department</h3><canvas id="chDept"></canvas></div>
+      <div class="card"><h3>Risk level distribution</h3><canvas id="chRisk"></canvas></div>
+      <div class="card"><h3>Employee segments (K-Means)</h3><canvas id="chSeg"></canvas></div>
+      <div class="card"><h3>Performance distribution</h3><canvas id="chPerf"></canvas></div>
+      <div class="card wide"><h3>Top attrition drivers (permutation importance)</h3><canvas id="chDrv"></canvas></div>
+    </div>
+  </section>
+
+  <!-- EMPLOYEES -->
+  <section id="employees" class="tab">
+    <h1>Employee Intelligence</h1>
+    <div class="filters">
+      <input id="q" type="search" placeholder="Search by name, ID (EMP0007) or role…">
+      <select id="fDept"><option value="">All departments</option></select>
+      <select id="fRisk"><option value="">All risk levels</option><option>High</option><option>Medium</option><option>Low</option></select>
+      <select id="fSeg"><option value="">All segments</option></select>
+      <label class="chk"><input type="checkbox" id="fAnom"> Anomalies only</label>
+    </div>
+    <div class="card tablecard">
+      <table id="empTable"><thead><tr>
+        <th data-sort="employee_id">ID</th><th data-sort="name">Name</th><th data-sort="department">Department</th>
+        <th data-sort="job_role">Role</th><th data-sort="risk_score">Risk ▾</th><th data-sort="attrition_prob">Attrition %</th>
+        <th data-sort="performance_score">Perf.</th><th data-sort="segment">Segment</th><th></th></tr></thead><tbody></tbody></table>
+      <div class="pager"><button id="prev">← Prev</button><span id="pageInfo"></span><button id="next">Next →</button></div>
+    </div>
+  </section>
+
+  <!-- WHAT-IF -->
+  <section id="whatif" class="tab">
+    <h1>What-If Predictor</h1>
+    <p class="muted">Enter details of a new or hypothetical employee. Missing fields use the workforce's typical values. The models return attrition, performance, promotion and training predictions with explanations.</p>
+    <div class="card"><div id="wiForm" class="formgrid"></div>
+      <div class="actions"><button class="primary" id="wiRun">Predict</button><button id="wiReset">Reset</button></div></div>
+    <div id="wiResult"></div>
+  </section>
+
+  <!-- REPORT -->
+  <section id="report" class="tab">
+    <h1>AI Workforce Report</h1>
+    <div id="reportBody"></div>
+  </section>
+
+  <!-- MODELS -->
+  <section id="models" class="tab">
+    <h1>Model Insights</h1>
+    <div id="modelBody"></div>
+  </section>
+</main>
+
+<!-- Employee drawer -->
+<div id="drawer" class="drawer hidden"><div class="drawerbox"><button id="closeDrawer" class="close">✕</button><div id="drawerContent"></div></div></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
